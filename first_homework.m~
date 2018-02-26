@@ -32,14 +32,13 @@ display_candles(random_data.high, random_data.low, random_data.close, random_dat
 % metatrader
 biggest_gap(10, 'tick_bar_tesla.csv');
 
-%% calculate hour or minute bars
 
-% more data in file tick_bar_tesla.csv
-mtsla_data = tick_data_conversion('tick_bar_tesla.csv', 'minute');
+%% calculate hour or minute bars
+mtsla_data = tick_data_conversion('tick_bar_tesla.csv', 'hour');
 
 mtsla_data.datetime
 
 % If generated any hour or minute data, if true display graph
 if ~isempty(mtsla_data)
-    display_candles(mtsla_data.high, mtsla_data.low, mtsla_data.close, mtsla_data.open, 'r', mtsla_data.datetime, 'TSLA Minute Tesla Inc', 0);
+    display_candles(mtsla_data.high, mtsla_data.low, mtsla_data.close, mtsla_data.open, 'r', mtsla_data.datetime, 'TSLA Minute Tesla Inc');
 end

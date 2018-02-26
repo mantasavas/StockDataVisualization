@@ -1,12 +1,19 @@
-function display_candles(high, low, close, open, color, date, titles)
+function display_candles(high, low, close, open, color, date, titles, tick_data)
     figure(1);
     % plot(tsla_data.date, tsla_data.close); % plotting data according close value 
-    candle(high, low, close, open, color, date);
+    if tick_data
+        candle(high, low, close, open, color);
+        set(gca,'xticklabel',{[]})
+    else
+        candle(high, low, close, open, color, date);
+        % adding information about graph
+        xlabel('Time Elapsed') % x-axis label
+       
+    end
+    
     grid on;
     
-    
-    % adding information about graph
     title(titles);
-    xlabel('Time Elapsed') % x-axis label
     ylabel('Stock Price (USD)') % y-axis label
+   
 end

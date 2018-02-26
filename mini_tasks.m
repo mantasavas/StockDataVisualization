@@ -123,7 +123,7 @@ for i = 1:size(a, 1)
     disp(mean(a(i, :)));
 end
 
-%https://se.mathworks.com/help/matlab/ref/mean.html
+% https://se.mathworks.com/help/matlab/ref/mean.html
 row = mean(a, 2);
 column = mean(a);
 
@@ -134,12 +134,20 @@ disp(column);
 
 %% 10. gauti matricos diagonalinius elementus - negalima panaudoti diag
 disp('------------');
-a = randi(10, 10)
+a = randi(10, 4, 4)
 b = a;
 for i = 1:size(a, 1)
-    disp(a(i,i));
+    %disp(a(i,i));
 end
 
-diagnol = b(1:size(b,1)+1:end);
+matrix_height = size(b, 1);
+matrix_length = size(b, 2);
+
+if matrix_height <= matrix_length
+    diagnol = b(1 : matrix_height + 1 : matrix_height.^2);
+else 
+    diagnol = b(1 : matrix_height + 1 : matrix_height .* (matrix_length - 1) + matrix_length);
+end
+
 disp(diagnol);
 

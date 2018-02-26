@@ -1,6 +1,6 @@
 
-% Function which finds biggest break between datetime
 function biggest_gap(gap_number, file_name)
+
     disp('Didziausiu pertrauku duomenyse buvo (HH:MM:SS): ');
     
     % Reading data from file
@@ -16,4 +16,5 @@ function biggest_gap(gap_number, file_name)
     disp(ttsla_data.laikas(maxIndex));
     fprintf('\n Kiek laiko truko: \n');
     disp(difference_time(maxIndex));
+
 end
