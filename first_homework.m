@@ -17,7 +17,7 @@ display_candles(mtsla_data.high, mtsla_data.low, mtsla_data.close, mtsla_data.op
 %ttsla_data = read_file('100_tick_tsla.csv', 'MM/dd/yyyy HH:mm:ss');
 ttsla_data = read_file('tick_bar_tesla.csv', 'MM/dd/yyyy HH:mm:ss');
 
-%% plotting <<tick>> graph
+%% plotting <<tick>>graph
 %display_candles(ttsla_data.high, ttsla_data.low, ttsla_data.close, ttsla_data.open, 'r', ttsla_data.laikas, 'TSLA Tic 100 Candles Tesla Inc', 0);
 display_candles(ttsla_data.high, ttsla_data.low, ttsla_data.close, ttsla_data.open, 'r', ttsla_data.laikas, 'TSLA 1 Tic Candles Tesla Inc', 1);
 
