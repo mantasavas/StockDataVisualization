@@ -11,7 +11,7 @@ mtsla_data = read_file('one_minute_tsla.csv', 'MM/dd/yyyy HH:mm');
 
 %% plotting <<minute>> graph
 %display_candles(mtsla_data.high, mtsla_data.low, mtsla_data.close, mtsla_data.open, 'r', mtsla_data.laikas, 'TSLA Minute Tesla Inc', 0);
-display_tick_data(mtsla_data);
+display_tick_data(x)
 
 %% reading <<tick>> data from file
 %ttsla_data = read_file('100_tick_tsla.csv', 'MM/dd/yyyy HH:mm:ss');
